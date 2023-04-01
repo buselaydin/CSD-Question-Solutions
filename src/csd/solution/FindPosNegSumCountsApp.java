@@ -1,6 +1,6 @@
 package csd.solution;
 
-public class FindPosNegSumCountsApp {
+class FindPosNegSumCountsApp {
 	
 	public static void run()
 	{
