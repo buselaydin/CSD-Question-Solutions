@@ -13,6 +13,8 @@ class CountDigitsTest {
 			
 			System.out.printf("%d of digits : %d%n",val, NumberUtil.countDigits(val));
 			
+			System.out.printf("%d of digits sum : %d%n",val, NumberUtil.sumDigits(val));
+			
 			System.out.print("Enter a number : ");
 		}
 	}
@@ -24,11 +26,34 @@ class NumberUtil {
 		int count = 0;
 		val = Math.abs(val);
 		
-		while(val != 0 ) {
+		while(val != 0) {
 			val /= 10;
 			count++;
 				
 		}
 		return count;	
+	}
+	
+	public static int sumDigits(int val)
+	{
+		int sum = 0;
+		val = Math.abs(val);
+		
+		while(val != 0) {
+			sum += (val % 10);
+			val /= 10;	
+		}
+		return sum;
+	}
+	
+	public static int reverse(int val)
+	{
+		int result = 0;
+		
+		while(val != 0) {
+			result = result * 10 + val % 10;
+			val /= 10;
+		}
+		return result;
 	}
 }
