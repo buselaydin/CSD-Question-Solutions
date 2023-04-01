@@ -9,8 +9,9 @@ class QuadraticEquationSolverApp {
 		double a = kb.nextDouble();
 		double b = kb.nextDouble();
 		double c = kb.nextDouble();
-		
+			
 		QuadraticEquationSolver.printRoots(a, b, c);
+		
 	}
 }
 class QuadraticEquationSolver {
