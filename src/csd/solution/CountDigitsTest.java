@@ -13,7 +13,7 @@ class CountDigitsTest {
 			
 			System.out.printf("%d of digits : %d%n",val, NumberUtil.countDigits(val));
 			
-			System.out.print("Enter a number: ");
+			System.out.print("Enter a number : ");
 		}
 	}
 }
