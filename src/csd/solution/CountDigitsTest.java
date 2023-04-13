@@ -8,7 +8,7 @@ class CountDigitsTest {
 		System.out.println("Sayı giriniz: ");
 		int val = kb.nextInt();
 		
-		System.out.print(NumberUtil.factorial(val));
+		System.out.print(NumberUtil.getNextFibonacciNumber(val));
 		
 		System.out.println();
 		System.out.print("of course i do it again :)");
@@ -27,6 +27,37 @@ class NumberUtil {
 				
 		}
 		return count;	
+	}
+	
+	public static int getFibonacciNumber(int n)
+	{
+		
+		int prev1 = 0;
+		int prev2 = 1;
+		int sum = 0;
+		
+		if (n == 1)
+			return prev1;
+		if (n == 2)
+			return prev2;
+		
+		for (int i = 2; i < n; i++) {
+			sum = prev1 + prev2;
+			prev1 = prev2;
+			prev2 = sum;
+		}
+		return sum;
+	}
+	public static int getNextFibonacciNumber(int n)
+	{
+		int result = 0;
+		
+		int i = 0;
+		for (;;) {
+			i++;
+			if ((result = getFibonacciNumber(i)) > n)
+				return result;
+		}
 	}
 	
 	public static boolean isArmstrong(int val)
