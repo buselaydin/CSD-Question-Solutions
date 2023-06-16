@@ -17,7 +17,7 @@ public class FindAverageApp {
 		}
 		double average = (double)sum / count;
 		
-		System.out.printf("Average: %.3f", average);
+		System.out.printf("Average: %.2f", average);
 		
 	}
 
